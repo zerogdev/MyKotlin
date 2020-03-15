@@ -30,7 +30,8 @@ class MainActivity : DatabindingActivity() {
 //        runBlockingExample() //동기식으로 launch가 실행완료될때까지 블럭된다
 //        runBlockingYieldExample()
 //        sumAll()
-        dispatcherExample()
+//        dispatcherExample()
+        suspendExample()
         Timber.tag("coroutine").d("coroutine launchInGlobalScope():${ Thread.currentThread()}")
         Thread.sleep(2000L)
         Timber.tag("coroutine").d("coroutine terminated:${ Thread.currentThread()}")

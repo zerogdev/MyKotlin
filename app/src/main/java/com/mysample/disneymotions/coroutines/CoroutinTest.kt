@@ -4,6 +4,8 @@ import kotlinx.coroutines.*
 import timber.log.Timber
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
+import kotlin.coroutines.RestrictsSuspension
+import kotlin.coroutines.suspendCoroutine
 
 fun now() = ZonedDateTime.now().toLocalTime().truncatedTo(ChronoUnit.MILLIS)
 
@@ -103,3 +105,14 @@ fun suspendExample() {
         yieldThreeTimes()
     }
 }
+
+interface Generator<out R, in T> {
+    fun next(param: T) : R?
+}
+
+@RestrictsSuspension
+interface GeneratorBuilder<in T, R> {
+    suspend fun yield(value: T): R
+    suspend fun yieldAll(generator: Generator<T, R>, param: R)
+}
+
