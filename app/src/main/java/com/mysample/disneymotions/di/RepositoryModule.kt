@@ -24,7 +24,7 @@ import timber.log.Timber
 val repositoryModule = module {
 
   single {
-    Timber.tag("LYK").d("repositoryModule-MainRepository(get(), get()) ")
+    Timber.tag("zerog").d("repositoryModule-MainRepository(get(), get()) ")
     MainRepository(get(), get()) }
 
   single { DetailRepository(get()) }

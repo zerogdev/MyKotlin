@@ -9,6 +9,6 @@ import timber.log.Timber
 abstract class DatabindingActivity : AppCompatActivity() {
     protected inline fun<reified T: ViewDataBinding> binding(@LayoutRes resId: Int) : Lazy<T>
     = lazy {
-        Timber.tag("LYK").d("DatabindingActivity-DataBindingUtil.setContentView<T>(this, resId) ")
+        Timber.tag("zerog").d("DatabindingActivity-DataBindingUtil.setContentView<T>(this, resId) ")
         DataBindingUtil.setContentView<T>(this, resId) }
 }

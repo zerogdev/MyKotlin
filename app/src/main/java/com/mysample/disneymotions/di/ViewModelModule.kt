@@ -8,7 +8,7 @@ import timber.log.Timber
 
 val viewModelModule = module {
     viewModel {
-        Timber.tag("LYK").d("viewModelModule-MainViewModel(get()")
+        Timber.tag("zerog").d("viewModelModule-MainViewModel(get()")
         MainViewModel(get()) }
 
     viewModel {

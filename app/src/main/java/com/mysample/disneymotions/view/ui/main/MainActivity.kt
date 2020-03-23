@@ -14,10 +14,10 @@ class MainActivity : DatabindingActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //mvvm, viewdatabinding, lifecycle
-        Timber.tag("LYK").d("main1")
+        Timber.tag("zerog").d("main1")
 
         binding.apply {
-            Timber.tag("LYK").d("main2")
+            Timber.tag("zerog").d("main2")
             pagerAdapter = MainPagerAdapter(supportFragmentManager)
             navigation = mainBottomNavigation
         }

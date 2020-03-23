@@ -14,7 +14,7 @@ import timber.log.Timber
 
 @BindingAdapter("adapter")
 fun bindAdapter(view: RecyclerView, baseAdapter: BaseAdapter) {
-    Timber.tag("LYK").d("bindAdapter-view.adapter = baseAdapter")
+    Timber.tag("zerog").d("bindAdapter-view.adapter = baseAdapter")
     view.adapter = baseAdapter
 }
 
@@ -27,7 +27,7 @@ fun bindToast(view: RecyclerView, text: LiveData<String>) {
 
 @BindingAdapter("adapterPosterLIst")
 fun bindAdapterPosterLIst(view: RecyclerView, posters: List<Poster>?) {
-    Timber.tag("LYK").d("bindAdapterPosterLIst-(view.adapter as? PosterAdapter)?.addPosterList(it) ${posters?.size}")
+    Timber.tag("zerog").d("bindAdapterPosterLIst-(view.adapter as? PosterAdapter)?.addPosterList(it) ${posters?.size}")
     posters.whatIfNotNullOrEmpty {
         (view.adapter as? PosterAdapter)?.addPosterList(it)
     }

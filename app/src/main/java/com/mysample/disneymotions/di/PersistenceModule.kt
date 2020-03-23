@@ -27,7 +27,7 @@ val persistenceModule = module {
 
   single {
 
-    Timber.tag("LYK").d("persistenceModule-Room\n" +
+    Timber.tag("zerog").d("persistenceModule-Room\n" +
             "      .databaseBuilder(androidApplication(), AppDatabase::class.java,\n" +
             "        androidApplication().getString(R.string.database))\n" +
             "      .allowMainThreadQueries()\n" +
@@ -43,6 +43,6 @@ val persistenceModule = module {
   }
 
   single {
-    Timber.tag("LYK").d("persistenceModule-get<AppDatabase>().posterDao() ")
+    Timber.tag("zerog").d("persistenceModule-get<AppDatabase>().posterDao() ")
     get<AppDatabase>().posterDao() }
 }

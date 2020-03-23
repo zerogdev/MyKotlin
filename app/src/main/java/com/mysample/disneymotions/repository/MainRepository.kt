@@ -44,7 +44,7 @@ class MainRepository constructor(
             }
         }
         liveData.apply {
-            Timber.tag("LYK").d("loadDisneyPosters-postValue(posters)")
+            Timber.tag("zerog").d("loadDisneyPosters-postValue(posters)")
             postValue(posters)
         }
     }

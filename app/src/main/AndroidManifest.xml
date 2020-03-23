@@ -21,6 +21,7 @@
         </activity>
 
         <activity android:name=".view.ui.main.details.PosterDetailActivity"/>
+        <activity android:name=".view.ui.main.TestActivity"/>
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ import timber.log.Timber
 val networkModule = module {
 
   single {
-    Timber.tag("LYK").d("networkModule-OkHttpClient.Builder()\n" +
+    Timber.tag("zerog").d("networkModule-OkHttpClient.Builder()\n" +
             "      .addInterceptor(RequestInterceptor())\n" +
             "      .build()")
     OkHttpClient.Builder()
@@ -37,7 +37,7 @@ val networkModule = module {
   }
 
   single {
-    Timber.tag("LYK").d("networkModule-Retrofit.Builder()\n" +
+    Timber.tag("zerog").d("networkModule-Retrofit.Builder()\n" +
             "      .client(get<OkHttpClient>())\n" +
             "      .baseUrl(\"https://gist.githubusercontent.com/skydoves/aa3bbbf495b0fa91db8a9e89f34e4873/raw/a1a13d37027e8920412da5f00f6a89c5a3dbfb9a/\")\n" +
             "      .addConverterFactory(GsonConverterFactory.create())\n" +
@@ -50,10 +50,10 @@ val networkModule = module {
   }
 
   single {
-    Timber.tag("LYK").d("networkModule-get<Retrofit>().create(DisneyService::class.java) ")
+    Timber.tag("zerog").d("networkModule-get<Retrofit>().create(DisneyService::class.java) ")
     get<Retrofit>().create(DisneyService::class.java) }
 
   single {
-    Timber.tag("LYK").d("networkModule-DisneyClient(get()) ")
+    Timber.tag("zerog").d("networkModule-DisneyClient(get()) ")
     DisneyClient(get()) }
 }

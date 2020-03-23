@@ -18,15 +18,15 @@ class DisneyApplication : Application() {
         }
 
         startKoin {
-            Timber.tag("LYK").d("application")
+            Timber.tag("zerog").d("application")
             androidContext(this@DisneyApplication)
-            Timber.tag("LYK").d("networkModule")
+            Timber.tag("zerog").d("networkModule")
             modules(networkModule)
-            Timber.tag("LYK").d("viewModelModule")
+            Timber.tag("zerog").d("viewModelModule")
 
-            Timber.tag("LYK").d("repositoryModule")
+            Timber.tag("zerog").d("repositoryModule")
             modules(repositoryModule)
-            Timber.tag("LYK").d("persistenceModule")
+            Timber.tag("zerog").d("persistenceModule")
             modules(persistenceModule)
             modules(viewModelModule)
         }

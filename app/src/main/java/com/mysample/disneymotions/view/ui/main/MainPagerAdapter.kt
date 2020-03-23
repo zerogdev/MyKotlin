@@ -10,15 +10,15 @@ class MainPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                Timber.tag("LYK").d("MainPagerAdapter-HomeFragment")
+                Timber.tag("zerog").d("MainPagerAdapter-HomeFragment")
                 HomeFragment()
             }
             1 -> {
-                Timber.tag("LYK").d("MainPagerAdapter-LibraryFragment")
+                Timber.tag("zerog").d("MainPagerAdapter-LibraryFragment")
                 LibraryFragment()
             }
             else -> {
-                Timber.tag("LYK").d("MainPagerAdapter-RadioFragment")
+                Timber.tag("zerog").d("MainPagerAdapter-RadioFragment")
                 RadioFragment()
             }
         }

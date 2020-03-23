@@ -22,7 +22,7 @@ class MainViewModel constructor(
 
         this.posterListLiveData = this.posterFetchingLiveData.switchMap {
             launchOnViewModelScope {
-                Timber.tag("LYK").d("this.mainRepository.loadDisneyPosters { this.toastLiveData.postValue(it)")
+                Timber.tag("zerog").d("this.mainRepository.loadDisneyPosters { this.toastLiveData.postValue(it)")
                 this.mainRepository.loadDisneyPosters { this.toastLiveData.postValue(it) }
             }
         }
