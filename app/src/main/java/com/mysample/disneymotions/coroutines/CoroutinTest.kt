@@ -9,6 +9,8 @@ import kotlin.coroutines.suspendCoroutine
 
 fun now() = ZonedDateTime.now().toLocalTime().truncatedTo(ChronoUnit.MILLIS)
 
+
+
 fun launchInGlobalScope() {
     GlobalScope.launch {
         Timber.tag("coroutine").d("coroutine started:${ Thread.currentThread()}")
